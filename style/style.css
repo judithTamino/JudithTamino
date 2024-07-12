@@ -1,0 +1,537 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap');
+
+/*========== BASE ==========*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  /*font-size: 10px;*/
+}
+
+input,
+textarea,
+button,
+body {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+}
+
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+body {
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(0, 0%, 23%);
+  direction: rtl;
+  line-height: 1.6;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*========== REUSABLE CSS CLASSES ==========*/
+.container {
+  max-width: 120rem;
+  /*1200px*/
+  margin-inline: 2.4rem;
+}
+
+.grid {
+  display: grid;
+  gap: 5.4rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.section {
+  padding-block: 8rem;
+}
+
+.section__title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  background-color: hsl(183, 85%, 51%);
+  color: hsl(0, 0%, 17%);
+  font-weight: 500;
+  padding: .8rem 1.6rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: all 1s;
+}
+
+.btn:hover,
+.btn:active {
+  box-shadow: 0 1px 30px hsla(183, 85%, 51%, .5);
+  transition-duration: .1s;
+  transform: translateY(-2px);
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: hsla(0, 0%, 96%, .9);
+  border-top: 2px solid hsl(183, 85%, 51%);
+  box-shadow: 0 4px 4px hsla(0, 0%, 0%, .1);
+}
+
+.nav {
+  height: 6.4rem;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  column-gap: 1.2rem;
+  align-items: center;
+}
+
+.nav__logo span {
+  font-family: "Satisfy", cursive;
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 17%);
+  display: none;
+}
+
+.nav__logo img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.nav__toggle,
+.nav__close {
+  color: hsl(183, 85%, 51%);
+  font-size: 2.4rem;
+}
+
+/* nav for moblie and ipad devices */
+@media screen and (max-width: 1020px) {
+  .nav__menu {
+    position: fixed;
+    left: 0;
+    top: -100%;
+    background-color: hsl(0, 0%, 96%);
+    width: 100%;
+    padding-block: 6.4rem;
+    box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
+    border-bottom-left-radius: 1.6rem;
+    border-bottom-right-radius: 1.6rem;
+    transition: all .6s ease-in-out;
+  }
+}
+
+.nav__list {
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.nav__link {
+  color: hsl(0, 0%, 17%);
+  transition: transform .5s;
+}
+
+.nav__link:hover {
+  color: hsl(183, 85%, 51%);
+  font-weight: 700;
+  transform: scale(1.2);
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.show-menu {
+  top: 0;
+}
+
+/*=============== HERO ===============*/
+.hero {
+  background-image:
+    linear-gradient(hsla(183, 85%, 51%, .4), hsla(183, 85%, 51%, .4)),
+    url('../images/hero.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__container {
+  padding-block: 8rem;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 4.6rem;
+  font-weight: 900;
+}
+
+.hero__description {
+  font-weight: 500;
+  padding-inline: 2.4rem;
+}
+
+/*=============== FEATURED ===============*/
+.featured {
+  box-shadow: 0 3px 6px hsla(0, 0%, 0%, .1);
+}
+
+.featured__logos {
+  padding-block: 1.4rem;
+  justify-content: center;
+}
+
+.featured__logo img {
+  width: 80px;
+  transition: transform .4s;
+}
+
+.featured__logo:hover img {
+  transform: scale(1.2);
+}
+
+/*=============== ABOUT ===============*/
+.about__container {
+  text-align: center;
+}
+
+.about__img,
+.about__description {
+  margin-bottom: 3.2rem;
+}
+
+.about__img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+/*=============== PROJECTS ===============*/
+.projects {
+  background-color: hsl(0, 0%, 94%);
+}
+
+.projects__content {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.projects__card {
+  /* max-width: 312px; */
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px hsla(0, 0%, 0%, .1);
+}
+
+.projects__card-img {
+  width: 100%;
+}
+
+.projects__card-body {
+  text-align: center;
+  padding-inline: 2.4rem;
+  margin-top: 3.2rem;
+}
+
+.projects__card-title {
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+}
+
+.projecrs__card-logos {
+  justify-content: center;
+  margin-bottom: 2.4rem;
+}
+
+.projects__card-logo {
+  width: 50px;
+}
+
+.projects__card-logo img {
+  transition: transform .4s;
+}
+
+.projects__card-logo img:hover {
+  transform: scale(1.2);
+}
+
+.projects__card-btn {
+  margin-bottom: 4.8rem;
+}
+
+/*=============== CONTACT US ===============*/
+.contact {
+  background-color: hsl(0, 0%, 17%);
+  color: #ffff;
+  position: relative;
+}
+
+.contact__container {
+  padding-block-start: 8rem;
+  padding-inline: 2.4rem;
+}
+
+.contact__bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact__content {
+  margin-bottom: 3.2rem;
+}
+
+.contact__title {
+  text-align: right;
+}
+
+.contact__form-group {
+  margin-bottom: 1.6rem;
+}
+
+.contact__form-group label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.contact__form-group input,
+.contact__form-group textarea {
+  width: 100%;
+  padding: .8rem;
+  border-bottom: 3px solid hsl(183, 85%, 51%);
+}
+
+/*=============== FOOTER ===============*/
+.footer {
+  position: relative;
+  background-color: hsl(183, 85%, 51%);
+}
+
+.footer__container {
+  column-gap: 1.2rem;
+  row-gap: 2.4rem;
+  text-align: center;
+}
+
+.footer__social {
+  color: hsl(0, 0%, 17%);
+}
+
+.footer__social i {
+  font-size: 4.4rem;
+}
+
+.footer__copy {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: hsl(0, 0%, 17%);
+  color: hsl(183, 85%, 51%);
+  justify-content: space-between;
+  padding: .8rem 1.6rem;
+}
+
+/*========== MEDIA QUERIES ==========*/
+@media screen and (min-width: 576px) {
+  .hero__container {
+    padding: 8rem 0 0;
+  }
+
+  .projects__container {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  /*========== REUSABLE CSS CLASSES ==========*/
+  .container {
+    margin: 0 auto;
+  }
+
+  .section__title {
+    font-size: 3.5rem;
+  }
+
+  .section {
+    padding-block: 9.6rem 12.8rem;
+  }
+
+  .grid {
+    row-gap: 9.6rem;
+    column-gap: 6.4rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  /*=============== HEADER & NAV ===============*/
+  .nav {
+    height: 8rem;
+  }
+
+  .nav__logo img {
+    width: 62px;
+  }
+
+  .nav__toggle,
+  .nav__close {
+    font-size: 3.2rem;
+  }
+
+  .nav__list {
+    row-gap: 3.2rem;
+  }
+
+  /*=============== ABOUT ===============*/
+  .about__description {
+    padding-inline: 9.6rem;
+  }
+
+  /*=============== PROJECTS ===============*/
+  .projects__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*=============== CONTACT US ===============*/
+  .contact__bg-img,
+  .contact__content {
+    width: 50%;
+  }
+
+  .contact__form-group input,
+  .contact__form-group textarea {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+
+  /*========== BASE ==========*/
+  body {
+    font-size: 2rem;
+  }
+
+  /*========== REUSABLE CSS CLASSES ==========*/
+  .container {
+    margin-inline: 3.2rem;
+  }
+
+  /*=============== HEADER & NAV ===============*/
+  .nav__logo span {
+    display: inline-block;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    column-gap: 6.4rem;
+  }
+
+  .nav__close,
+  .nav__toggle {
+    display: none;
+  }
+
+  /*=============== HERO ===============*/
+  .hero__title {
+    font-size: 8rem;
+  }
+
+  /*=============== FEATURED ===============*/
+  .featured__logo img {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 1152px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 2rem;
+  }
+
+  .nav {
+    padding-inline: 3.2rem;
+  }
+
+  .projects__container {
+    padding-inline: 3.2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .footer__social {
+    font-size: 1.4rem;
+  }
+
+  .footer__social i {
+    font-size: 2.4rem;
+  }
+}
+
+/*
+font size (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+spacing (px):
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+ */
