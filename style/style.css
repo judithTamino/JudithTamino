@@ -68,10 +68,6 @@ img {
   gap: 5.4rem;
 }
 
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .flex {
   display: flex;
   align-items: center;

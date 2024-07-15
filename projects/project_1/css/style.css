@@ -1,0 +1,177 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap');
+
+
+/*=============== BASE ===============*/
+/*
+font size (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+spacing (px):
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+ */
+
+/*========== BASE ==========*/
+html {
+  font-size: 62.5%;
+  /* 10px */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button,
+body {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(0, 0%, 23%);
+  direction: rtl;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== PATH ===============*/
+.path {
+  width: 100%;
+  height: 100vh;
+}
+
+.path__upper {
+  width: 100%;
+  height: 213px;
+  background-image: url('../images/Path\ 15.png');
+}
+
+
+.path__content {
+  width: 299px;
+  background-color: hsla(0, 0%, 10%, 0.8);
+  color: #fff;
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4.2rem 3.4rem;
+}
+
+.path__content-title,
+.path__content-description {
+  text-align: center;
+}
+
+.path__content-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  padding-inline: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.path__content-description {
+  margin-bottom: 2.4rem;
+}
+
+.content__form-group {
+  margin-bottom: 1.6rem;
+}
+
+.content__form-group label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+
+.content__form-group input {
+  width: 100%;
+  border: 1px solid hsl(331, 77%, 47%);
+  padding: .2rem .8rem;
+}
+
+#email {
+  text-align: left;
+}
+
+.content__form-btn {
+  background-color: hsl(331, 77%, 47%);
+  color: #fff;
+  font-weight: 700;
+  padding: .8rem 2.4rem;
+  cursor: pointer;
+}
+
+/*========== MEDIA QUERIES ==========*/
+/* Large devices such as laptops (1024px and up) */
+@media screen and (min-width: 1024px) {
+  body,
+  input,
+  button {
+    font-size: 2rem;
+  }
+
+  .path__upper {
+    height: 65%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .path__content {
+    width: 569px;
+    padding: 6.4rem 6.8rem;
+    top: 120px;
+    right: 100px;
+    transform: none;
+  }
+
+  .path__content-title {
+    padding-inline: 0;
+    font-size: 3.6rem;
+  }
+
+  .content__form-group {
+    margin-bottom: 2.4rem;
+  }
+
+  .content__form-group label {
+    font-size: 1.6rem;
+  }
+
+  .content__form-group input {
+    padding: 0.8rem 1.6rem;
+  }
+
+  .content__form-btn {
+    padding: 1.6rem 4.8rem;
+    margin-bottom: 2.4rem;
+  }
+}
