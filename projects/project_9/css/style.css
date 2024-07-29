@@ -1,23 +1,13 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Heebo:wght@100..900&display=swap');
 
-/*=============== VARIABLES CSS ===============*/
-:root {
-  /*========== colors ==========*/
-  --title-color: hsl(218, 44%, 22%);
-  --text-color: hsl(220, 15%, 55%);
-  --body-color: hsl(212, 45%, 89%);
-  --card-color: hsl(0, 0%, 100%);
-  /*========== font and typography ==========*/
-  --body-font: 'Overpass', sans-serif; 
-  --h1-font-size: 1.5rem;
-  --normal-font-size: .938rem; 
-  /*========== font weight ==========*/
-  --font-regular: 400;
-  --font-bold: 700;
+/*========== BASE ==========*/
+html {
+  font-size: 62.5%;
+  /* 10px */
 }
 
-/*=============== BASE ===============*/
 *,
 *::before,
 *::after {
@@ -26,11 +16,33 @@
   margin: 0;
 }
 
+input,
 body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  height: 100vh;
+  font-family: "Assistant", sans-serif;
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  direction: rtl;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -38,39 +50,96 @@ img {
   height: auto;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /*=============== CARD ===============*/
-.card {
-  background-color: var(--card-color);
-  box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
-  padding: 1em;
-  width: 320px;
+.card__content {
+  width: 100%;
+  height: 300px;
+  background-image: url("../images/pahtMobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
 }
 
-.card,
-.card__image {
-  border-radius: 1rem;
-}
-
-.card__content {
-  padding-inline: .6em;
-}
-
-.card__title {
-  margin: 1em 0;
-  font-weight: var(--font-bold);
-  color: var(--title-color);
-}
-
+.card__title,
 .card__description {
-  color: var(--text-color);
-  margin-bottom: 1.5em;
+  visibility: hidden;
 }
 
+.card__form {
+  padding: 8rem 2.4rem;
+  display: grid;
+  gap: 2.4rem;
+}
 
+.card__form label,
+.card__form-btn {
+  color: hsl(227, 98%, 19%);
+  font-weight: 700;
+}
+
+.card__form label {
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.card__form input,
+.card__form-btn {
+  width: 100%;
+  height: 34px;
+}
+
+.card__form input {
+  padding: .4rem;
+  background-color: hsl(219, 100%, 95%);
+  border-bottom: 2px solid hsl(64, 88%, 47%);
+}
+
+.card__form-btn {
+  background-color: hsl(64, 88%, 47%);
+  cursor: pointer;
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px) {
+  .card__content {
+    background-image: url("../images/Path.png");
+    background-position: center bottom;
+    height: 600px;
+    padding: 12.8rem 0 0;
+  }
+
+  .card__title,
+  .card__description {
+    visibility: visible;
+  }
+
+  .card__title {
+    font-size: 8.6rem;
+    color: hsl(64, 88%, 47%);
+  }
+
+  .card__description {
+    font-size: 2rem;
+    color: hsl(0, 0%, 98%);
+  }
+
+  .card__form {
+    grid-template-columns: 418px 418px 166px;
+    justify-content: center;
+  }
+
+  .card__form input,
+  .card__form-btn {
+    height: 50px;
+  }
+
+  .card__form input {
+    padding: 1rem;
+  }
+  
+  .card__form-btn {
+    font-size: 2.2rem;
+    align-self: end;
+  }
+}
