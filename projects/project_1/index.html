@@ -4,40 +4,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 1</title>
+  <title>Good Coffee</title>
 
+  <!--=============== BOOTSTRAP ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="path">
-    <div class="path__upper"></div>
+  <div class="coffee">
+    <div class="coffee__img">
+      <img src="images/Coffee.png" alt="image of coffee">
+    </div>
 
-    <div class="path__content">
-      <h1 class="path__content-title">
-        תן לנו להוביל אותך קדימה
+    <div class="coffee__content">
+      <h1 class="coffee__title">
+        קפה טוב לבוקר טוב
       </h1>
 
-      <p class="path__content-description">
-        לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ.
+      <p class="coffee__description">
+        לקבלת קופון לקפה חינם ומפנק שיפתח לכם את היום בחיוך, יש למלא את הפרטים:
       </p>
 
-      <form action="" class="content__form">
-        <div class="content__form-group">
-          <label for="fullname">שם מלא</label>
-          <input type="text" id="fullname" required>
+      <form action="" class="coffee__form">
+        <div class="coffee__form-group">
+          <label for="fullname" class="form-label">
+            שם מלא
+          </label>
+          <input type="text" id="fullname" class="form-control form-control-lg rounded-0" required>
         </div>
 
-        <div class="content__form-group">
-          <label for="email">אימייל</label>
-          <input type="email" id="email" required>
+        <div class="coffee__form-group">
+          <label for="email" class="form-label">
+            אימייל
+          </label>
+          <input type="email" id="email" class="form-control form-control-lg rounded-0" required>
         </div>
 
-        <button class="content__form-btn">שליחה</button>
+        <div class="d-grid d-lg-block">
+          <button class="coffee__form-btn btn btn-lg rounded-0" type="submit">שליחה</button>
+        </div>
       </form>
     </div>
   </div>
+
+  <!--=============== BOOTSTRAP JS ===============-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

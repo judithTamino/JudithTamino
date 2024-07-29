@@ -148,7 +148,7 @@ img {
 }
 
 /* nav for moblie and ipad devices */
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1024px) {
   .nav__menu {
     position: fixed;
     left: 0;
@@ -259,7 +259,6 @@ img {
 }
 
 .projects__card {
-  /* max-width: 312px; */
   background-color: hsl(0, 0%, 100%);
   overflow: hidden;
   border-radius: 10px;
@@ -376,7 +375,8 @@ img {
 }
 
 /*========== MEDIA QUERIES ==========*/
-@media screen and (min-width: 576px) {
+/* Small devices such as large phones (640px and up) */
+@media screen and (min-width: 640px) {
   .hero__container {
     padding: 8rem 0 0;
   }
@@ -386,9 +386,8 @@ img {
   }
 }
 
+/* Medium devices such as tablets (768px and up) */
 @media screen and (min-width: 768px) {
-
-  /*========== REUSABLE CSS CLASSES ==========*/
   .container {
     margin: 0 auto;
   }
@@ -413,7 +412,6 @@ img {
     font-size: 1.6rem;
   }
 
-  /*=============== HEADER & NAV ===============*/
   .nav {
     height: 8rem;
   }
@@ -431,17 +429,14 @@ img {
     row-gap: 3.2rem;
   }
 
-  /*=============== ABOUT ===============*/
   .about__description {
     padding-inline: 9.6rem;
   }
 
-  /*=============== PROJECTS ===============*/
   .projects__container {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /*=============== CONTACT US ===============*/
   .contact__bg-img,
   .contact__content {
     width: 50%;
@@ -453,19 +448,16 @@ img {
   }
 }
 
-@media screen and (min-width: 1023px) {
-
-  /*========== BASE ==========*/
+/* Large devices such as laptops (1024px and up) */
+@media screen and (min-width: 1024px) {
   body {
     font-size: 2rem;
   }
 
-  /*========== REUSABLE CSS CLASSES ==========*/
   .container {
     margin-inline: 3.2rem;
   }
 
-  /*=============== HEADER & NAV ===============*/
   .nav__logo span {
     display: inline-block;
   }
@@ -480,18 +472,17 @@ img {
     display: none;
   }
 
-  /*=============== HERO ===============*/
   .hero__title {
     font-size: 8rem;
   }
 
-  /*=============== FEATURED ===============*/
   .featured__logo img {
     width: 100px;
   }
 }
 
-@media screen and (min-width: 1152px) {
+/* Largest devices such as desktops (1280px and up) */
+@media screen and (min-width: 1280px) {
   .container {
     margin-inline: auto;
   }
@@ -523,11 +514,3 @@ img {
     font-size: 2.4rem;
   }
 }
-
-/*
-font size (px):
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-spacing (px):
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
- */

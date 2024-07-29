@@ -1,20 +1,9 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap');
-
-
-/*=============== BASE ===============*/
-/*
-font size (px):
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-spacing (px):
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
- */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
 
 /*========== BASE ==========*/
 html {
   font-size: 62.5%;
-  /* 10px */
 }
 
 *,
@@ -34,7 +23,7 @@ body {
 
 body {
   background-color: hsl(0, 0%, 96%);
-  color: hsl(0, 0%, 23%);
+  color: hsl(0, 0%, 17%);
   direction: rtl;
 }
 
@@ -61,117 +50,117 @@ img {
   height: auto;
 }
 
-/*=============== PATH ===============*/
-.path {
-  width: 100%;
-  height: 100vh;
+/*=============== COFFEE ===============*/
+.coffee__content {
+  padding: 4.8rem 4.2rem 8rem;
 }
 
-.path__upper {
-  width: 100%;
-  height: 213px;
-  background-image: url('../images/Path\ 15.png');
-}
-
-
-.path__content {
-  width: 299px;
-  background-color: hsla(0, 0%, 10%, 0.8);
-  color: #fff;
-  position: absolute;
-  top: 90px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 4.2rem 3.4rem;
-}
-
-.path__content-title,
-.path__content-description {
+.coffee__title,
+.coffee__description {
   text-align: center;
+  color: hsl(240, 95%, 17%);
 }
 
-.path__content-title {
-  font-size: 2.5rem;
+.coffee__title {
+  font-size: 2.8rem;
+  margin-bottom: 1.6rem;
   font-weight: 900;
-  padding-inline: 1.4rem;
-  margin-bottom: 1.2rem;
 }
 
-.path__content-description {
+.coffee__description {
+  margin-bottom: 3.2rem;
+}
+
+.coffee__form-group {
   margin-bottom: 2.4rem;
 }
 
-.content__form-group {
-  margin-bottom: 1.6rem;
-}
-
-.content__form-group label {
-  display: block;
-  font-size: 1.4rem;
+.coffee__form-group label,
+.coffee__form-btn {
   font-weight: 700;
-  margin-bottom: .4rem;
 }
 
-.content__form-group input {
-  width: 100%;
-  border: 1px solid hsl(331, 77%, 47%);
-  padding: .2rem .8rem;
+.coffee__form-group label {
+  font-size: 1rem;
 }
 
-#email {
-  text-align: left;
+.coffee__form-group input {
+  border-bottom: 3px solid hsl(240, 95%, 17%);
+  background-color: hsl(219, 100%, 95%);
 }
 
-.content__form-btn {
-  background-color: hsl(331, 77%, 47%);
+.coffee__form-group input:focus {
+  background-color: hsl(219, 100%, 95%);
+}
+
+.coffee__form-btn {
+  background-color: hsl(240, 95%, 17%);
   color: #fff;
-  font-weight: 700;
-  padding: .8rem 2.4rem;
-  cursor: pointer;
+}
+
+.coffee__form-btn:hover {
+  color: hsl(240, 95%, 17%);
+  border: 1px solid hsl(240, 95%, 17%);
 }
 
 /*========== MEDIA QUERIES ==========*/
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 640px) {
+  .coffee__content {
+    padding: 1.6rem 2.4rem 2.4rem;
+  }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 768px) {
+  .coffee {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coffee__img {
+    order: 1;
+  }
+
+  .coffee__img img {
+    height: 100%;
+  }
+
+  .coffee__content {
+    place-self: center;
+  }
+}
+
 /* Large devices such as laptops (1024px and up) */
 @media screen and (min-width: 1024px) {
-  body,
-  input,
-  button {
+  .coffee {
+    grid-template-columns: 1.5fr 2fr;
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 1280px) {
+  .coffee__content {
+    padding-inline: 9.6rem;
+  }
+
+  .coffee__title,
+  .coffee__description {
+    text-align: right;
+  }
+
+  .coffee__title {
+    font-size: 4.3rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .coffee__description {
     font-size: 2rem;
+    margin-bottom: 2.6rem;
   }
 
-  .path__upper {
-    height: 65%;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .path__content {
-    width: 569px;
-    padding: 6.4rem 6.8rem;
-    top: 120px;
-    right: 100px;
-    transform: none;
-  }
-
-  .path__content-title {
-    padding-inline: 0;
-    font-size: 3.6rem;
-  }
-
-  .content__form-group {
-    margin-bottom: 2.4rem;
-  }
-
-  .content__form-group label {
+  .coffee__form-group label {
     font-size: 1.6rem;
-  }
-
-  .content__form-group input {
-    padding: 0.8rem 1.6rem;
-  }
-
-  .content__form-btn {
-    padding: 1.6rem 4.8rem;
-    margin-bottom: 2.4rem;
   }
 }

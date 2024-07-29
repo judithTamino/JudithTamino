@@ -1,57 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 2</title>
+  <title>תנו לנו להוביל אותך קדימה</title>
 
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!--==================== HEADER ====================-->
-    <header class="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo">
-          <img src="./images/nav__profile-image.png" alt="profile image" class="nav__img">
-          <span>Judith Tamino</span>
-        </a>
-  
-        <div class="nav__menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#hero" class="nav__link">ראשי</a>
-            </li>
-  
-            <li class="nav__item">
-              <a href="#about" class="nav__link">אודות</a>
-            </li>
-  
-            <li class="nav__item">
-              <a href="#services" class="nav__link">שירותים</a>
-            </li>
-  
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">צור קשר</a>
-            </li>
-          </ul>
+  <div class="path">
+    <div class="path__upper"></div>
+
+    <div class="path__content">
+      <h1 class="path__content-title">
+        תן לנו להוביל אותך קדימה
+      </h1>
+
+      <p class="path__content-description">
+        לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ.
+      </p>
+
+      <form action="" class="content__form">
+        <div class="content__form-group">
+          <label for="fullname">שם מלא</label>
+          <input type="text" id="fullname" required>
         </div>
-  
-        <a href="#" class="nav__toggle">
-          <i class="ri-menu-line"></i>
-        </a>
-      </nav>
-    </header>
-  
-    <!--==================== HERO ====================-->
-    <section class="hero" id="hero">
-      <div class="hero_container container">
-        <h1 class="hero__title">תיק עבודות</h1>
-        <p class="hero__discription">
-          לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכה, בתחום הדפוס, ההדפסה
-          והפרסום. למשל: לורםלורם איפסום או בקיצור לי.
-        </p>
-      </div>
-    </section>
+
+        <div class="content__form-group">
+          <label for="email">אימייל</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <button class="content__form-btn" type="submit">שליחה</button>
+      </form>
+    </div>
+  </div>
 </body>
+
 </html>

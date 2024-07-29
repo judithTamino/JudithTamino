@@ -1,0 +1,76 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== colors ==========*/
+  --title-color: hsl(218, 44%, 22%);
+  --text-color: hsl(220, 15%, 55%);
+  --body-color: hsl(212, 45%, 89%);
+  --card-color: hsl(0, 0%, 100%);
+  /*========== font and typography ==========*/
+  --body-font: 'Overpass', sans-serif; 
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem; 
+  /*========== font weight ==========*/
+  --font-regular: 400;
+  --font-bold: 700;
+}
+
+/*=============== BASE ===============*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*=============== CARD ===============*/
+.card {
+  background-color: var(--card-color);
+  box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
+  padding: 1em;
+  width: 320px;
+  text-align: center;
+}
+
+.card,
+.card__image {
+  border-radius: 1rem;
+}
+
+.card__content {
+  padding-inline: .6em;
+}
+
+.card__title {
+  margin: 1em 0;
+  font-weight: var(--font-bold);
+  color: var(--title-color);
+}
+
+.card__description {
+  color: var(--text-color);
+  margin-bottom: 1.5em;
+}
+
+
