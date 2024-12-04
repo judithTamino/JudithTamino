@@ -179,7 +179,7 @@ img {
 .hero {
   background-image:
     linear-gradient(hsla(183, 85%, 51%, .4), hsla(183, 85%, 51%, .4)),
-    url('../../../images/hero.png');
+    url('../images/hero.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -218,10 +218,11 @@ img {
 .featured__logos {
   padding-block: 1.4rem;
   justify-content: center;
+  gap: 2.4rem;
 }
 
 .featured__logo img {
-  width: 80px;
+  width: 25px;
   transition: transform .4s;
 }
 
