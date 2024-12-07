@@ -9,11 +9,11 @@
   <!--=============== BOXICONS ===============-->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-  <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="css/style.css">
-
   <!--=============== SWIPER JS ===============-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
       <div class="nav-menu" id="nav-menu">
         <ul class="nav-list grid">
           <li class="nav-item">
-            <a href="#home" class="nav-link">
+            <a href="#home" class="nav-link active-link">
               <i class='bx bx-home-alt nav-icon'></i> Home
             </a>
           </li>
@@ -39,11 +39,11 @@
             </a>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#skills" class="nav-link">
               <i class='bx bx-file nav-icon'></i> Skills
             </a>
-          </li>
+          </li> -->
 
           <li class="nav-item">
             <a href="#services" class="nav-link">
@@ -59,7 +59,7 @@
 
           <li class="nav-item">
             <a href="#contact" class="nav-link">
-              <i class='bx bx-send nav-icon'></i> Contact Me
+              <i class='bx bx-send nav-icon'></i> ContactMe
             </a>
           </li>
         </ul>
@@ -68,6 +68,8 @@
       </div>
 
       <div class="nav btns">
+        <!-- theme change btn -->
+        <i class='bx bx-moon change-theme' id="theme-btn"></i>
         <div class="nav-toggle" id="nav-toggle">
           <i class='bx bx-grid-alt'></i>
         </div>
@@ -79,7 +81,7 @@
   <main class="main">
     <!--==================== HOME ====================-->
     <section class="home section" id="home">
-      <div class="home-container container grid">
+      <div class="home-container container">
         <div class="home-content grid">
           <div class="home-social">
             <a href="#" class="home-social--icon">
@@ -119,16 +121,6 @@
               Contact Me <i class='bx bx-send btn-icon'></i>
             </a>
           </div>
-        </div>
-
-
-        <div class="home-scroll">
-          <a href="
-          #about" class="home-scroll--btn btn--flex">
-            <i class='bx bx-mouse home-scroll--mouse'></i>
-            <span class="home-scroll--txt">Scroll down</span>
-            <i class='bx bx-down-arrow-alt home-scroll-arrow'></i>
-          </a>
         </div>
       </div>
     </section>
@@ -206,10 +198,297 @@
       <h2 class="section-title">HTML & CSS </h2>
       <span class="section-subtitle">HTML and CSS Projects</span>
 
-      <div class="services-container container grid swiper mySwiper">
+      <div class="services-container container grid swiper">
         <div class="swiper-wrapper">
           <!--=============== PROJECT 1 ===============-->
           <div class="services-content grid swiper-slide">
+
+            <img src="images/good-coffee.jpg" alt="project 1 image" class="services-img">
+
+            <div>
+              <ul class="services-logos grid">
+                <li class="services-logo">
+                  <img src="images/html-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/css-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/bootstrap-icon.png" alt="html logo">
+                </li>
+              </ul>
+
+              <div class="services-data">
+                <h3 class="services-title">Good Coffee</h3>
+                <p class="services-description">
+                  Good Coffee project using HTML, CSS and BOOTSTARP
+                </p>
+                <a href="./HTML_CSS_Projects/landing_pages/project_1.html"
+                  class="btn btn--flex btn--small services-btn">
+                  Go to project page
+                  <i class='bx bx-right-arrow-alt btn-icon'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--=============== PROJECT 2 ===============-->
+          <div class="services-content grid swiper-slide">
+            <img src="images/to-lead.jpg" alt="project 2 image" class="services-img">
+
+            <div>
+              <ul class="services-logos grid">
+                <li class="services-logo">
+                  <img src="images/html-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/css-icon.svg" alt="html logo">
+                </li>
+              </ul>
+
+              <div class="services-data">
+                <h3 class="services-title">Let Us Lead You</h3>
+                <p class="services-description">
+                  Let Us Lead You project using HTML and CSS.
+                </p>
+                <a href="./HTML_CSS_Projects/landing_pages/project_2.html"
+                  class="btn btn--flex btn--small services-btn">
+                  Go to project page
+                  <i class='bx bx-right-arrow-alt btn-icon'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--=============== PROJECT 3 ===============-->
+          <div class="services-content grid swiper-slide">
+            <img src="images/here&now.jpg" alt="project 3 image" class="services-img">
+
+            <div>
+              <ul class="services-logos grid">
+                <li class="services-logo">
+                  <img src="images/html-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/css-icon.svg" alt="html logo">
+                </li>
+              </ul>
+
+              <div class="services-data">
+                <h3 class="services-title">Here & Now</h3>
+                <p class="services-description">
+                  Here & Now project using HTML and CSS.
+                </p>
+                <a href="./HTML_CSS_Projects/landing_pages/project_3.html"
+                  class="btn btn--flex btn--small services-btn">
+                  Go to project page
+                  <i class='bx bx-right-arrow-alt btn-icon'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--=============== PROJECT 4 ===============-->
+          <div class="services-content grid swiper-slide">
+            <img src="images/free-consultation.jpg" alt="project 4 image" class="services-img">
+
+            <div>
+              <ul class="services-logos grid">
+                <li class="services-logo">
+                  <img src="images/html-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/css-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/sass-icon.svg" alt="sass logo">
+                </li>
+              </ul>
+
+              <div class="services-data">
+                <h3 class="services-title">
+                  Free Consultation
+                </h3>
+                <p class="services-description">
+                  Free Consultation project using HTML, CSS and SASS.
+                </p>
+                <a href="./HTML_CSS_Projects/landing_pages/project_4.html"
+                  class="btn btn--flex btn--small services-btn">
+                  Go to project page
+                  <i class='bx bx-right-arrow-alt btn-icon'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--=============== PROJECT 5 ===============-->
+          <div class="services-content grid swiper-slide">
+            <img src="images/discover-world.jpg" alt="project 5 image" class="services-img">
+
+            <div>
+              <ul class="services-logos grid">
+                <li class="services-logo">
+                  <img src="images/html-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/css-icon.svg" alt="css logo">
+                </li>
+              </ul>
+
+              <div class="services-data">
+                <h3 class="services-title">Discover the World</h3>
+                <p class="services-description">
+                  Discover the World project using HTML and CSS.
+                </p>
+                <a href="./HTML_CSS_Projects/landing_pages/project_5.html"
+                  class="btn btn--flex btn--small services-btn">
+                  Go to project page
+                  <i class='bx bx-right-arrow-alt btn-icon'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--=============== PROJECT 6 ===============-->
+          <div class="services-content grid swiper-slide">
+            <img src="images/result-summary.png" alt="project 6 image" class="services-img">
+
+            <div>
+              <ul class="services-logos grid">
+                <li class="services-logo">
+                  <img src="images/html-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/css-icon.svg" alt="css logo">
+                </li>
+              </ul>
+
+              <div class="services-data">
+                <h3 class="services-title">
+                  Result Summary
+                </h3>
+                <p class="services-description">
+                  Result Summary project using HTML and CSS.
+                </p>
+                <a href="./HTML_CSS_Projects/landing_pages/project_6.html"
+                  class="btn btn--flex btn--small services-btn">
+                  Go to project page
+                  <i class='bx bx-right-arrow-alt btn-icon'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--=============== PROJECT 7 ===============-->
+          <div class="services-content grid swiper-slide">
+            <img src="images/product-preview.png" alt="project 7 image" class="services-img">
+
+            <div>
+              <ul class="services-logos grid">
+                <li class="services-logo">
+                  <img src="images/html-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/css-icon.svg" alt="css logo">
+                </li>
+              </ul>
+
+              <div class="services-data">
+                <h3 class="services-title">
+                  Product Preview
+                </h3>
+                <p class="services-description">
+                  Product Preview project using HTML and CSS.
+                </p>
+                <a href="./HTML_CSS_Projects/landing_pages/project_7.html"
+                  class="btn btn--flex btn--small services-btn">
+                  Go to project page
+                  <i class='bx bx-right-arrow-alt btn-icon'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--=============== PROJECT 8 ===============-->
+          <div class="services-content grid swiper-slide">
+            <img src="images/interactive-rating.png" alt="project 8 image" class="services-img">
+
+            <div>
+              <ul class="services-logos">
+                <li class="services-logo grid">
+                  <img src="images/html-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/css-icon.svg" alt="css logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/javascript-icon.svg" alt="js logo">
+                </li>
+              </ul>
+
+              <div class="services-data">
+                <h3 class="services-title">
+                  Interactive rating
+                </h3>
+                <p class="services-description">
+                  Interactive rating project using HTML, CSS and JavaScript.
+                </p>
+                <a href="./HTML_CSS_Projects/landing_pages/project_8.html"
+                  class="btn btn--flex btn--small services-btn">
+                  Go to project page
+                  <i class='bx bx-right-arrow-alt btn-icon'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--=============== PROJECT 9 ===============-->
+          <div class="services-content grid swiper-slide">
+            <img src="images/lead.png" alt="project 9 image" class="services-img">
+
+            <div>
+              <ul class="services-logos grid">
+                <li class="services-logo">
+                  <img src="images/html-icon.svg" alt="html logo">
+                </li>
+                <li class="services-logo">
+                  <img src="images/css-icon.svg" alt="html logo">
+                </li>
+              </ul>
+
+              <div class="services-data">
+                <h3 class="services-title">Let Us Lead</h3>
+                <p class="services-description">
+                  Let Us Lead project using HTML and CSS.
+                </p>
+                <a href="./HTML_CSS_Projects/landing_pages/project_9.html"
+                  class="btn btn--flex btn--small services-btn">
+                  Go to project page
+                  <i class='bx bx-right-arrow-alt btn-icon'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next">
+          <i class='bx bx-chevron-right swiper-services--icon'></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class='bx bx-chevron-left swiper-services--icon'></i>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== JAVASCRIPT PROJECTS (PROJECTS) ====================-->
+    <section class="projects section" id="projects">
+      <h2 class="section-title">Java Script</h2>
+      <span class="section-subtitle">Java Script Projects</span>
+
+      <div class="services-container container grid swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!--=============== PROJECT 1 ===============-->
+          <div class="services-content swiper-slide grid">
             <img src="images/good-coffee.jpg" alt="project 1 image" class="services-img">
 
             <ul class="services-logos grid">
@@ -460,20 +739,132 @@
       </div>
     </section>
 
-    <!--==================== JAVASCRIPT PROJECTS (PROJECTS) ====================-->
-    <section class="projects section" id="projects">
-      <h2 class="section-title">Java Script Projects</h2>
-      <span class="section-subtitle">Java Script Projects</span>
-    </section>
-
     <!--==================== CONTACT ME ====================-->
-    <section class="contact section" id="contact"></section>
+    <section class="contact section" id="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <span class="section-subtitle">Get in touch</span>
+
+      <div class="contact-container container grid">
+        <div>
+          <div class="contact-info">
+            <i class='bx bx-phone contact-icon'></i>
+
+            <div>
+              <h3 class="contact-title">Call Me</h3>
+              <span class="contact-subtitle">053-123457</span>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <i class='bx bx-envelope contact-icon'></i>
+
+            <div>
+              <h3 class="contact-title">Email</h3>
+              <span class="contact-subtitle">judith@email.com</span>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <i class='bx bx-map contact-icon'></i>
+
+            <div>
+              <h3 class="contact-title">Location</h3>
+              <span class="contact-subtitle">8106 Locust Rd, Israel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form grid">
+          <div class="contact-inputs grid">
+            <div class="contact-content">
+              <label for="name" class="contact-lable">Name</label>
+              <input type="text" class="contact-input" id="name" oninput="isFieldValid()">
+            </div>
+
+            <div class="contact-content">
+              <label for="email" class="contact-lable">Email</label>
+              <input type="email" class="contact-input" id="email" oninput="isFieldValid()">
+            </div>
+          </div>
+
+          <div class="contact-content">
+            <label for="phone" class="contact-lable">Phone</label>
+            <input type="number" class="contact-input" id="phone" oninput="isFieldValid()">
+          </div>
+
+          <div class="contact-content">
+            <label for="msg" class="contact-lable">Message</label>
+            <textarea cols="0" rows="7" class="contact-input" id="msg" oninput="isFieldValid()"></textarea>
+          </div>
+
+          <div>
+            <button class="btn btn--flex" id="contact-btn" disabled>
+              Send Message
+              <i class="bx bx-send btn-icon btn-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!--==================== FOOTER ====================-->
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="footer-bg">
+      <div class="footer-container container grid">
+        <div>
+          <h1 class="footer-title">Judith</h1>
+          <span class="footer-subtitle">software student</span>
+        </div>
+
+        <ul class="footer-links">
+          <li>
+            <a href="#services" class="footer-link">Services</a>
+          </li>
+          <li>
+            <a href="#projects" class="footer-link">Projects</a>
+          </li>
+          <li>
+            <a href="#contact" class="footer-link">Contactme</a>
+          </li>
+        </ul>
+
+        <div class="footer-contact grid">
+          <a href="" class="footer-info">
+            <i class='bx bx-map'></i>
+            <span>8106 Locust Rd, Israel</span>
+          </a>
+          <a href="" class="footer-info">
+            <i class='bx bx-at'></i>
+            <span>judith@email.com</span>
+          </a>
+          <a href="" class="footer-info">
+            <i class='bx bxl-whatsapp'></i>
+            <span>053-1234567</span>
+          </a>
+          <a href="" class="footer-info">
+            <i class='bx bx-phone'></i>
+            <span>053-1234567</span>
+          </a>
+          <a href="" class="footer-info">
+            <i class='bx bxl-linkedin'></i>
+            <span>JudithTamino</span>
+          </a>
+          <a href="" class="footer-info">
+            <i class='bx bxl-facebook'></i>
+            <span>JudithTamino</span>
+          </a>
+        </div>
+      </div>
+
+      <p class="footer-copy">&#169; Judith Tamino. All right reserved</p>
+    </div>
+  </footer>
 
   <!--==================== SCROLL TOP ====================-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class='bx bx-up-arrow-alt scrollup-icon'></i>
+  </a>
 
   <!--==================== SWIPER JS ====================-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
