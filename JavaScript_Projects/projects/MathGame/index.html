@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Game</title>
+
+  <!--=============== BOXICONS ===============-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="game">
+    <h1 class="game-title">Math Game</h1>
+    <!--==================== GAME OPTIONS ====================-->
+    <section class="options section">
+      <h2 class="section-title">game options</h2>
+      <div class="options-container container">
+        <div class="input-group">
+          <label for="input-range">range:</label>
+          <select id="input-range" onchange="drawRandomNumbers(this.value)" class="options-input">
+            <option value="10">1-10</option>
+            <option value="100">1-100</option>
+            <option value="1000">1-1000</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="input-operator">operator:</label>
+          <select id="input-operator" class="options-input" onchange="changeOperator()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== CARDS ====================-->
+    <section class="cards section">
+      <div class="cards-container container">
+        <div class="card">
+          <p class="card-number" id="first-number"></p>
+        </div>
+        <div class="card">
+          <p class="card-operator" id="operator">+</p>
+        </div>
+        <div class="card">
+          <p class="card-number" id="second-number"></p>
+        </div>
+        <div class="card">
+          <p class="card-operator">=</p>
+        </div>
+        <div class="card">
+          <input type="number" id="answer">
+        </div>
+      </div>
+      <div class="btn-container container">
+        <button class="check-btn" onclick="checkAnswer()">check</button>
+      </div>
+    </section>
+
+    <!--==================== RESULTS ====================-->
+    <section class="results section hide-section">
+      <div class="result-container container">
+        <h2 class="section-title">results</h2>
+
+        <div class="result-accordion"></div>
+      </div>
+    </section>
+  </div>
+  <script src="js/JS_DOM_Mission_Math_Game.js"></script>
+</body>
+
+</html>

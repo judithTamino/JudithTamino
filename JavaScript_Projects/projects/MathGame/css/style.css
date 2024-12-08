@@ -1,0 +1,337 @@
+/*=============== GOOGLE FONTS ===============*/
+/* @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /*========== colors ==========*/
+  --first-color: #ffab40;
+  --first-color-alt: #ffe6c6;
+  --second-color: #7e57c2;
+  --text-color: #2d3030;
+  --text-color-light: #707979;
+  --body-color: #f9fcfc;
+  --border-color: #e0f2f1;
+  /*========== font & typography ==========*/
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Fredoka", sans-serif;
+  --biggest-font-size: 5.2rem;
+  --h1-font-size: 3rem;
+  --h2-font-size: 2rem;
+  --normal-font-size: 1.6rem;
+  --small-font-siz: 1.4rem;
+  /*========== font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+select,
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+input, select, button {
+  border: none;
+  outline: none;
+}
+
+input, select {
+  width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 900px;
+  margin: 0 2.4rem;
+}
+
+.section {
+  padding: 3.2rem 0;
+}
+
+.section-title {
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h2-font-size);
+  color: var(--second-color);
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.hide-section {
+  display: none;
+}
+
+/*=============== CARDS ===============*/
+.game {
+  padding: 2.4rem 1.2rem;
+}
+
+.game-title {
+  color: #e5ddf3;
+  font-size: var(--biggest-font-size);
+  font-family: var(--second-font);
+  text-align: center;
+  letter-spacing: .4rem;
+  text-shadow:
+    .1rem .1rem 0 #f2eef9,
+    0.2rem 0.2rem 0 #7e57c2,
+    0.3rem 0.3rem 0 #8b68c8,
+    0.4rem 0.4rem 0 #9879ce,
+    0.5rem 0.5rem 0 #a589d4;
+  margin-bottom: 3.2rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 1.2rem;
+  margin-bottom: 4.8rem;
+}
+
+.card,
+.card input {
+  font-family: var(--second-font);
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 150px;
+  height: 200px;
+  border-radius: .5rem;
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5);
+  border: 8px solid #fff;
+}
+
+.card:nth-child(odd) {
+  background-color: var(--first-color);
+  color: var(--first-color);
+}
+
+.card:nth-child(even) {
+  background-color: var(--second-color);
+  color: var(--second-color);
+}
+
+.card-number,
+.card-operator,
+.card input {
+  width: 80%;
+  height: 85%;
+  border-top-left-radius: 3.4rem;
+  border-bottom-right-radius: 3.4rem;
+  background-color: #fff;
+}
+
+.card-number,
+.card-operator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card input {
+  text-align: center;
+  color: var(--first-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.check-btn {
+  width: 150px;
+  height: 50px;
+  color: var(--body-color);
+  background-color: var(--first-color);
+  border-radius: .5rem;
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.check-btn:hover,
+.check-btn:focus {
+  box-shadow: 0 0 0 5px rgb(255 171 64 / 50%);
+}
+
+/*=============== RESULTS ===============*/
+.result-accordion {
+  display: grid;
+  row-gap: 2.4rem;
+  transition: all .8s ease-in;
+}
+
+.accordion-item {
+  background-color: var(--body-color);
+  border: 2px solid #f2eef9;
+  border-radius: .5rem;
+  padding: 1.6rem 1.2rem;
+}
+
+.accordion-header,
+.accordion-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-title {
+  font-size: var(--small-font-siz);
+  color: var(--text-color-light);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: .4rem;
+}
+
+.accordion-arrow {
+  display: inline-flex;
+  background-color: var(--first-color-alt);
+  padding: .4rem;
+  border-radius: .5rem;
+  color: var(--first-color);
+  margin-right: 1.2rem;
+  cursor: pointer;
+}
+
+.accordion-arrow i {
+  transition: all .4s;
+}
+
+.accordion-content {
+  overflow: hidden;
+  display: none;
+  padding: 2.4rem 1.6rem 0 0;
+  transition: all .8s linear;
+}
+
+.accordion-open .accordion-arrow i {
+  transform: rotate(180deg);
+}
+
+.accordion-open .accordion-content {
+  display: flex;
+}
+
+/*=============== GAME OPTIONS ===============*/
+.options-container {
+  max-width: 500px;
+  display: grid;
+  gap: 1.6rem;
+  /* 12 / 16 / 24 / 32 / 48 */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.input-group label {
+  color: var(--text-color-light);
+  text-transform: capitalize;
+}
+
+.options-input {
+  padding: .8rem;
+  border: 3px solid var(--border-color);
+  border-radius: .5rem;
+}
+
+/*=============== BREAKPOINTS===============*/
+@media only screen and (min-width: 540px) {
+  .options-container {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .result-accordion {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .container {
+    margin: 0 5.2rem;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .btn-container {
+    margin-top: 3.2rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    margin: 0 auto;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .btn-container {
+    margin-top: 4.4rem;
+  }
+} 
+
+/*
+  - spacing (px):
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+- font size (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+*/
+
+
+/* @media only screen and (min-width: 620px) {
+  .container {
+    padding: 3.2rem 4.8rem 0;
+  }
+
+  .math-game {
+    margin: 1rem auto;
+    border-radius: 1rem ;
+  }
+} */

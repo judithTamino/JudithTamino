@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+
+  <!--=============== BOXICONS ===============-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <section class="game">
+      <h1 class="game-title">Memory Game</h1>
+
+      <div class="game-container"></div>
+
+      <button class="btn restart-btn" onclick="restartGame()">
+        Restart
+      </button>
+    </section>
+
+    <section class="popup hide-popup">
+      <div class="popup-container">
+        <img src="images/trophy.png" alt="trophy" class="popup-img">
+        <h2 class="popup-title">
+          Congratulations <br>
+          You Won
+        </h2>
+
+        <button class="btn close-btn" onclick="closePopup()">
+          <i class='bx bx-x'></i>
+        </button>
+      </div>
+
+
+      <div class="confetti-container">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+      </div>
+    </section>
+  </div>
+
+  <!--=============== APP JS ===============-->
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
