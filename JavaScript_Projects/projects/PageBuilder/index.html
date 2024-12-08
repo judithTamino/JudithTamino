@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Builder</title>
+
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="page-builder container grid">
+    <div class="page-builder_controllers container">
+      <h1 class="main-title">
+        Page Builder
+      </h1>
+
+      <!--==================== ELEMENT TYPE ====================-->
+      <section class="section">
+        <div class="input-group">
+          <label for="element-type">Element Type:</label>
+          <select id="element-type" class="user-input">
+            <option value="div">div</option>
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="h3">h3</option>
+            <option value="p">p</option>
+            <option value="span">span</option>
+          </select>
+        </div>
+      </section>
+
+      <!--==================== BACKGROUNG COLOR ====================-->
+      <section class="section">
+        <div class="input-group">
+          <label for="element-bg_color">Background Color:</label>
+          <input type="color" id="element-bg_color" value="#3858d6" class="color-input">
+        </div>
+      </section>
+
+      <!--==================== WIDTH & HIEGHT ====================-->
+      <section class="section grid grid--2-cols">
+        <div class="input-group">
+          <label for="element-width">Width:</label>
+          <input type="number" id="element-width" class="user-input" min="0" value="100">
+        </div>
+
+        <div class="input-group">
+          <label for="element-width">Height:</label>
+          <input type="number" id="element-height" class="user-input" min="0" value="100">
+        </div>
+      </section>
+
+      <!--==================== CONTECT ====================-->
+      <section class="section">
+        <div class="input-group">
+          <label for="element-txt">Text:</label>
+          <textarea name="" id="element-txt" class="user-input" rows="4"></textarea>
+        </div>
+      </section>
+
+      <!--==================== FONT COLOR & SIZE ====================-->
+      <section class="section grid grid--2-cols">
+        <div class="input-group">
+          <label for="element-font_color">
+            Font Color:
+          </label>
+          <input type="color" id="element-font_color" value="#eb7724" class="color-input">
+        </div>
+
+        <div class="input-group">
+          <label for="element-font_size">
+            Font Size:
+          </label>
+          <input type="number" id="element-font_size" class="user-input" min="10" value="16">
+        </div>
+      </section>
+
+      <!--==================== BORDER ====================-->
+      <section class="section">
+        <h2 class="sub-title">Border</h2>
+
+        <div class="grid grid--3-cols">
+          <div class="input-group">
+            <label for="border-width">Width:</label>
+            <input type="number" id="border-width" class="user-input" min="0" value="1">
+          </div>
+
+          <div class="input-group">
+            <label for="border-style">Style:</label>
+            <select id="border-style" class="user-input">
+              <option value="none">none</option>
+              <option value="dotted">dotted</option>
+              <option value="dashed">dashed</option>
+              <option value="solid">solid</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+              <option value="ridge">ridge</option>
+              <option value="outset">outset</option>
+              <option value="inset">inset</option>
+              <option value="hidden">hidden</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="border-color">
+              Color:
+            </label>
+            <input type="color" id="border-color" value="#eb7724" class="color-input">
+          </div>
+        </div>
+      </section>
+
+      <!--==================== BORDER RADIUS ====================-->
+      <section class="section">
+        <h2 class="sub-title">round border</h2>
+        <div class="grid grid--4-cols">
+          <div class="input-group">
+            <label for="radius-tl">top <br> left</label>
+            <input type="number" id="radius-tl" class="user-input" min="0" value="5">
+          </div>
+
+          <div class="input-group">
+            <label for="radius-tr">top <br> right</label>
+            <input type="number" id="radius-tr" class="user-input" min="0" value="5">
+          </div>
+
+          <div class="input-group">
+            <label for="radius-br">
+              bottom <br> right</label>
+            <input type="number" id="radius-br" class="user-input" min="0" value="5">
+          </div>
+
+          <div class="input-group">
+            <label for="radius-bl">
+              bottom <br> left
+            </label>
+            <input type="number" id="radius-bl" class="user-input" min="0" value="5">
+          </div>
+        </div>
+      </section>
+
+      <!--==================== MARGIN ====================-->
+      <section class="section">
+        <h2 class="sub-title">Margin</h2>
+        <div class="grid grid--4-cols">
+          <div class="input-group">
+            <label for="mar-top">top</label>
+            <input type="number" id="mar-top" class="user-input" min="0" value="10">
+          </div>
+
+          <div class="input-group">
+            <label for="mar-right">right</label>
+            <input type="number" id="mar-right" class="user-input" min="0" value="10">
+          </div>
+
+          <div class="input-group">
+            <label for="mar-bottom">bottom</label>
+            <input type="number" id="mar-bottom" class="user-input" min="0" value="10">
+          </div>
+
+          <div class="input-group">
+            <label for="mar-left">left</label>
+            <input type="number" id="mar-left" class="user-input" min="0" value="10">
+          </div>
+        </div>
+      </section>
+
+      <!--==================== PADDING ====================-->
+      <section class="section">
+        <h2 class="sub-title">padding</h2>
+        <div class="grid grid--4-cols">
+          <div class="input-group">
+            <label for="pad-top">top</label>
+            <input type="number" id="pad-top" class="user-input" min="0" value="10">
+          </div>
+
+          <div class="input-group">
+            <label for="pad-right">right</label>
+            <input type="number" id="pad-right" class="user-input" min="0" value="10">
+          </div>
+
+          <div class="input-group">
+            <label for="pad-bottom">bottom</label>
+            <input type="number" id="pad-bottom" class="user-input" min="0" value="10">
+          </div>
+
+          <div class="input-group">
+            <label for="pad-left">left</label>
+            <input type="number" id="pad-left" class="user-input" min="0" value="10">
+          </div>
+        </div>
+      </section>
+
+      <!--==================== SHADOW ====================-->
+      <section class="section">
+        <h2 class="sub-title">Shadow</h2>
+
+        <div class="grid grid--3-cols grid--2-rows">
+          <div class="input-group">
+            <label for="x-axis">x axis</label>
+            <input type="number" id="x-axis" class="user-input" min="0" value="10">
+          </div>
+
+          <div class="input-group">
+            <label for="y-axis">y axis</label>
+            <input type="number" id="y-axis" class="user-input" min="0" value="10">
+          </div>
+
+          <div class="input-group">
+            <label for="shadow-color">color</label>
+            <input type="color" id="shadow-color" value="#000000" class="color-input">
+          </div>
+
+          <!-- new row -->
+          <div class="input-group range">
+            <label for="opacity">opacity:</label>
+            <input type="range" id="opacity" class="input-range" min="0" max="1" step="0.1" value="0.5"
+              oninput="displayRange(this.value)">
+          </div>
+
+          <span class="range-value">0.5</span>
+        </div>
+      </section>
+
+      <!--==================== TITLE ATTRIBUTES  ====================-->
+      <section class="section">
+        <div class="input-group">
+          <label for="title-att">element title</label>
+          <input type="text" id="title-att" class="user-input">
+        </div>
+      </section>
+
+      <!--==================== ID ATTRIBUTES  ====================-->
+      <section class="section grid grid--2-rows">
+        <div class="input-group">
+          <label for="id-att">element id:</label>
+          <input type="text" id="id-att" class="user-input" oninput="isIdValid(this.value)">
+        </div>
+
+        <p class="msg"></p>
+      </section>
+
+      <!--==================== BUTTONS ====================-->
+      <div class="btn-container grid grid--3-cols container">
+        <a href="#" class="btn add-btn" onclick="addNewElement()">Add</a>
+
+        <a href="#" class="btn remove-btn" onclick="deleteBoard()">
+          <i class="ri-delete-bin-line"></i>
+          <span class="btn-txt">Delete</span>
+        </a>
+
+        <a href="#" class="btn save-btn" onclick="saveBoard()">
+          <i class="ri-save-line btn-icon"></i>
+          <span class="btn-txt">Save</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="page-builder_board container"></div>
+  </div>
+  <!--=============== APP JS ===============-->
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
