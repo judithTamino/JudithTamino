@@ -96,7 +96,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3.2rem;
+  gap: 1.2rem;
 }
 
 .pigGame-data {
@@ -111,6 +111,7 @@ button {
 .pigGame-description {
   color: var(--text-color);
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .backdrop {
@@ -150,6 +151,7 @@ button {
 .players-container {
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 100px;
   text-align: center;
 }
 

@@ -38,7 +38,7 @@ function hold() {
 }
 
 function isWinner() {
-  if (playersScore[`player-${currentPlayer}`] >= 20) {
+  if (playersScore[`player-${currentPlayer}`] >= 100) {
     document.getElementById(`player-${currentPlayer}`).textContent = 'Winner';
 
     dice.style.display = 'none';
