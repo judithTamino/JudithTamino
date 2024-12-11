@@ -1,0 +1,145 @@
+/*=============== GOOGLE FONTS ===============*/
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Heebo:wght@100..900&display=swap');
+
+/*========== BASE ==========*/
+html {
+  font-size: 62.5%;
+  /* 10px */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+body {
+  font-family: "Assistant", sans-serif;
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  direction: rtl;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.card__content {
+  width: 100%;
+  height: 300px;
+  background-image: url("../images/pahtMobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.card__title,
+.card__description {
+  visibility: hidden;
+}
+
+.card__form {
+  padding: 8rem 2.4rem;
+  display: grid;
+  gap: 2.4rem;
+}
+
+.card__form label,
+.card__form-btn {
+  color: hsl(227, 98%, 19%);
+  font-weight: 700;
+}
+
+.card__form label {
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.card__form input,
+.card__form-btn {
+  width: 100%;
+  height: 34px;
+}
+
+.card__form input {
+  padding: .4rem;
+  background-color: hsl(219, 100%, 95%);
+  border-bottom: 2px solid hsl(64, 88%, 47%);
+}
+
+.card__form-btn {
+  background-color: hsl(64, 88%, 47%);
+  cursor: pointer;
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px) {
+  .card__content {
+    background-image: url("../images/Path.png");
+    background-position: center bottom;
+    height: 600px;
+    padding: 12.8rem 0 0;
+  }
+
+  .card__title,
+  .card__description {
+    visibility: visible;
+  }
+
+  .card__title {
+    font-size: 8.6rem;
+    color: hsl(64, 88%, 47%);
+  }
+
+  .card__description {
+    font-size: 2rem;
+    color: hsl(0, 0%, 98%);
+  }
+
+  .card__form {
+    grid-template-columns: 418px 418px 166px;
+    justify-content: center;
+  }
+
+  .card__form input,
+  .card__form-btn {
+    height: 50px;
+  }
+
+  .card__form input {
+    padding: 1rem;
+  }
+  
+  .card__form-btn {
+    font-size: 2.2rem;
+    align-self: end;
+  }
+}

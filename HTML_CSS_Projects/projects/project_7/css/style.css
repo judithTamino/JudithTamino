@@ -1,0 +1,151 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+  --neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+  /*========== font and typography ==========*/
+  --body-font: 'Montserrat', sans-serif;
+  --second-font: 'Fraunces', serif;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  /*========== font weight ==========*/
+  --font-medium: 500;
+  --font-bold: 700;
+}
+
+/*=============== BASE ===============*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background: var(--primary-cream);
+  color: var(--neutral-dark-grayish-blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 2rem 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: .5rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.main__title {
+  font-family: var(--second-font);
+  font-weight: var(--font-bold);
+  font-size: var(--h1-font-size);
+}
+
+/*=============== MAIN ===============*/
+.card {
+  background: var(--neutral-white);
+  border-radius: 20px;
+  grid-template-rows: 1.5fr 2fr;
+  overflow: hidden;
+}
+
+/*=============== CARD HEADER ===============*/
+.card__img {
+  background-image: url("../images/image-product-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*=============== CARD BODY ===============*/
+.card__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+.card__subtitle {
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+  letter-spacing: 5px;
+  color: var(--neutral-dark-grayish-blue);
+}
+
+.card__title {
+  color: var(--neutral-very-dark-blue);
+}
+
+.card__description {
+  line-height: 1.7;
+}
+
+
+.card__price-discount {
+  color: var(--primary-dark-cyan);
+}
+
+.card__btn {
+  background: var(--primary-dark-cyan);
+  color: var(--neutral-white);
+  padding: 1.25em 0;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.card__btn:hover {
+  background-color: hsl(158, 36%, 20%);
+}
+
+/*=============== BREAKPOINTS===============*/
+@media screen and (min-width: 375px) {
+  .card {
+    width: 375px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 600px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+  }
+
+  .card__img {
+    background-image: url("../images/image-product-desktop.jpg");
+  }
+
+  .card__container {
+    padding: 2rem 1.6rem;
+  }
+}

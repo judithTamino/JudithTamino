@@ -1,0 +1,154 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --first-color: hsl(25, 97%, 53%);
+  --title-color: hsl(0, 0%, 100%);
+  --text-color: hsl(217, 12%, 63%);
+  --body-color: hsl(216, 12%, 8%);
+  --container-color: hsl(213, 19%, 18%);
+  /*========== font and typography ==========*/
+  --body-font: 'Overpass', sans-serif;
+  --h1-font-size: 1.7rem;
+  --normal-font-size: 15px; 
+  /*========== font weight ==========*/
+  --font-regular: 400;
+  --font-bold: 700;
+}
+
+/*=============== BASE ===============*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background: var(--body-color);
+  color: var(--text-color);
+}
+
+a{
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container { 
+  height: 100vh;
+  padding-inline: 1rem;
+
+}
+
+.section {
+  background: var(--container-color);
+  border-radius: 25px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.section__description {
+  line-height: 1.5;
+}
+
+.circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: hsla(216, 12%, 54%, .2);
+}
+
+.hidden {
+  position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+
+/*=============== RATING ===============*/
+.rating__menu {
+  justify-content: space-between;
+}
+
+.rating__item {
+  cursor: pointer;
+}
+
+.rating__item:hover {
+  background: var(--first-color);
+  color: var(--title-color);
+  transition: background .4s;
+}
+
+.rating__item-active {
+  background: var(--text-color);
+  color: var(--title-color);
+}
+
+.rating__btn {
+  background: var(--first-color);
+  color: var(--title-color);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 25px;
+}
+
+.rating__btn:hover {
+  background: var(--title-color);
+  color: var(--first-color);
+  transition: background .5s;
+}
+
+/*=============== THANK YOU ===============*/
+.thank {
+  align-items: center;
+}
+
+.thank__subtitle {
+  border-radius: 20px;
+  background: hsla(216, 12%, 54%, .2);
+  padding: .5rem 1rem;
+  color: var(--first-color);
+}
+
+.thank__description {
+  text-align: center;
+}
+
+/*=============== BREAKPOINTS===============*/
+@media screen and (min-width: 375px) {
+  .section {
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    width: 450px;
+    padding: 3.5rem;
+  }
+}
