@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping List</title>
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="images/groceries.png" type="image/x-icon">
+
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- <div class="circle circle1"></div>
+    <div class="circle circle2"></div> -->
+
+    <div class="shopping-list">
+      <h1>
+        Shopping List
+        <img src="images/groceries.png" alt="groceries image">
+      </h1>
+
+      <div class="summary">
+        <div class="summary-total">
+          items (<span id="total-qty">0</span>)
+        </div>
+        <div class="summary-total">
+          total: $<span id="total-price">0</span>
+        </div>
+      </div>
+
+      <div class="add-item grid">
+        <div class="input-group">
+          <input type="text" id="name" class="item-input" placeholder="" required>
+          <label>item</label>
+        </div>
+
+        <div class="input-group">
+          <input type="number" id="quantity-number" class="item-input" placeholder="" required>
+          <label>quantity</label>
+        </div>
+
+        <div class="input-group">
+          <input type="number" id="price" class="item-input" placeholder="" required>
+          <label>price</label>
+        </div>
+
+        <button class="btn" onclick="addItem()">
+          <span class="btn-txt">Add Item</span>
+          <span class="btn-icon"><i class="ri-add-line"></i></span>
+        </button>
+      </div>
+
+      <ul class="display-items"></ul>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

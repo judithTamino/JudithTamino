@@ -1,0 +1,246 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+
+:root {
+  /*========== colors ==========*/
+  --first-color: #ff75aa;
+  --first-color-alt: #cc5c87;
+  --first-color-light: #ffe5ef;
+  --text-color: #351823;
+  --text-color-light: #5e5558;
+  /*========== font & typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 3rem;
+  --h1-font-size: 2.4rem;
+  --h3-font-size: 2rem;
+  --normal-font-size: 1.6rem;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 5.2rem;
+    --h1-font-size: 3.6rem;
+    --h3-font-size: 2.4rem;
+    --normal-font-size: 1.8rem;
+  }
+}
+
+/*========== BASE ==========*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  /*font-size: 10px;*/
+}
+
+body,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+/*==================== LAYOUT ====================*/
+.container {
+  max-width: 768px;
+  margin-inline: 2.4rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.btn {
+  font-size: var(--h2-font-size);
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+  transition: color .6s ease;
+}
+
+.btn:hover {
+  font-weight: 500;
+}
+
+.btn:hover .btn-icon {
+  margin-right: 1rem;
+}
+
+.btn-icon {
+  background-color: var(--first-color);
+  padding: .8rem;
+  color: var(--first-color-light);
+  font-size: 2.4rem;
+  border-radius: 50%;
+}
+
+/*==================== PIG GAME ====================*/
+.pigGame-container {
+  margin-block: 3.2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.pigGame-data {
+  text-align: center;
+}
+
+.pigGame-title {
+  color: var(--first-color);
+  text-transform: uppercase;
+}
+
+.pigGame-description {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.backdrop {
+  background-color: rgb(255 117 170 / 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.pigGame-rules {
+  position: relative;
+  width: 85%;
+  max-width: 500px;
+  padding: 4.8rem 2.4rem 3.2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.close-icon {
+  cursor: pointer;
+  position: absolute;
+  top: .4rem;
+  right: .4rem;
+  background-color: var(--first-color);
+  padding: .4rem;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: .6rem;
+}
+
+.players-container {
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+
+.player-1-container,
+.player-2-container {
+  padding: 2.4rem 0;
+}
+
+.player-2-container {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.player-name,
+.current-score-txt,
+.player-score {
+  font-weight: 200;
+}
+
+.player-name {
+  font-size: var(--big-font-size);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-block: 2rem 1rem;
+}
+
+.player-score {
+  font-size: 4.8rem;
+  color: var(--first-color);
+}
+
+.current-score-container {
+  background-color: var(--first-color);
+  color: var(--first-color-light);
+  width: 70%;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+.current-score {
+  color: #fff;
+}
+
+.pigGame-dice {
+  width: 100px;
+  grid-column: 1/3;
+  justify-self: center;
+  display: none;
+}
+
+/* active player */
+.active {
+  background-color: var(--first-color-light);
+}
+
+.active .player-name {
+  font-weight: 400;
+}
+
+.btns-container {
+  row-gap: 2.4rem;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  margin-bottom: 4.8rem;
+}
+
+/*==================== MEDIA QUERIES ====================*/
+/* For medium devices */
+@media screen and (min-width: 700px) {
+  body {
+    margin: 0;
+  }
+
+  .container {
+    margin-inline: auto;
+  }
+
+  .pigGame-container {
+    padding: 0 1.6rem;
+  }
+
+  .players-container {
+    grid-template-columns: 1fr .5fr 1fr;
+    align-items: center;
+  }
+
+  .pigGame-dice {
+    grid-column: 2 / 3;
+  }
+
+  .player-2-container {
+    grid-column: 3 / 4;
+  }
+}

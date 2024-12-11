@@ -1,0 +1,340 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --first-color: #4e4abf;
+  --second-color: #05d8f0;
+  --body-color: #dfdef2;
+  --title-color: #1c1c22;
+  --text-color: #58576b;
+  --border-color: #dbdbe1;
+  --error-color: #FF0022;
+  /*========== font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --h1-font-size: 2.4rem;
+  --normal-font-size: 1.6rem;
+  --small-font-size: 1.4rem;
+  --smaller-font-size: 1.2rem;
+  /*========== font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+
+/*=============== BASE ===============*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-weight: var(--font-regular);
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+}
+
+input,
+select,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding-inline: 2.4rem;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+/*=============== SHOPPING LIST ===============*/
+.shopping-list {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  background: linear-gradient(130deg,
+      hsla(240, 60%, 99%, 0.6),
+      hsla(240, 60%, 99%, 0.2));
+  box-shadow: inset 2px 2px 1px hsla(240, 60%, 99%, 0.3),
+    inset -2px -2px 1px hsla(240, 60%, 99%, 0.2);
+  margin: 12.8rem auto 2.4rem;
+  padding: 4.8rem 3.2rem 8rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+}
+
+.shopping-list h1 {
+  color: var(--title-color);
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+  gap: 1rem;
+}
+
+.shopping-list img {
+  width: 35px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+
+.summary span {
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.add-item {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: .8rem;
+}
+
+.input-group {
+  position: relative;
+  font-size: var(--smaller-font-size);
+}
+
+.input-group:nth-child(2) {
+  gap: .4rem;
+}
+
+.input-group select {
+  padding: .8rem .2rem .8rem .4rem;
+  font-size: var(--small-font-size);
+}
+
+.item-input {
+  width: 100%;
+  padding: .4rem .4rem 1.2rem .8rem;
+  border: 1px solid var(--border-color);
+  border-radius: .5rem;
+}
+
+.error-border {
+  border-color: rgb(234 76 137 / 40%);
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.item-input+label {
+  position: absolute;
+  left: 1rem;
+  top: 1.6rem;
+  cursor: text;
+  transition: all .3s ease;
+}
+
+.item-input:focus+label {
+  top: 2rem;
+  font-size: var(--smaller-font-size);
+}
+
+.item-input:not(:placeholder-shown).item-input:not(:focus)+label {
+  top: 2rem;
+  font-size: var(--smaller-font-size);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ADD BUTTON */
+.btn {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--first-color);
+  color: var(--body-color);
+  border-radius: .5rem;
+  overflow: hidden;
+  grid-column: 1 / 4;
+}
+
+.btn, .btn-txt, .btn-icon {
+  transition: all .3s ease;
+}
+
+.btn-txt {
+  transform: translateX(1rem);
+  font-weight: var(--font-semi-bold);
+}
+
+.btn-icon {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 40px;
+  background-color: #3e3b99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon i {
+  font-size: var(--h1-font-size);
+}
+
+.btn:hover {
+  background-color: #3e3b99;
+}
+
+.btn:hover .btn-txt {
+  color: transparent;
+}
+
+.btn:hover .btn-icon {
+  width: 100%;
+  transform: translateX(0);
+}
+
+.display-items {
+  margin-top: 1.6rem;
+}
+
+.display-items li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  padding-left: 3.2rem;
+}
+
+.display-items li::before {
+  content: "";
+  top: .5rem;
+  left: .8rem;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-image: url("../images/uncheck.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.display-items li:last-child {
+  margin-bottom: 0;
+}
+
+.item-description span:first-child {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  text-transform: capitalize;
+}
+
+.item-description p {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+/* style checked list */
+.display-items li.checked,
+.display-items .checked>.item-description span:first-child {
+  color: hsl(244, 6%, 56%);
+  text-decoration: line-through;
+}
+
+.display-items li.checked::before {
+  background-image: url("../images/check.png");
+}
+
+/* DELETE BTN */
+.item-edit a {
+  transform: scale(1.2);
+  color: var(--text-color);
+  transition: all .2s linear;
+}
+
+.item-edit a:hover {
+  transform: scale(1.5);
+  color: hsl(0, 65%, 48%);
+}
+
+/*=============== BREAKPOINTS===============*/
+/* Small devices such as large phones */
+@media only screen and (min-width: 500px) {
+  .circle {
+    width: 350px;
+    height: 350px;
+  }
+
+  .circle1 {
+    left: 0;
+  }
+}
+
+/* Medium devices such as tablets */
+@media only screen and (min-width: 700px) {
+  .circle {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* Large devices such as laptops */
+@media only screen and (min-width: 1000px) {
+  .circle {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+/* Largest devices such as desktops */
+@media only screen and (min-width: 1100px) {
+  .circle {
+    width: 500px;
+    height: 500px;
+  }
+
+  .circle1 {
+    left: 10%;
+  }
+
+  .circle2 {
+    right: 10%;
+  }
+}

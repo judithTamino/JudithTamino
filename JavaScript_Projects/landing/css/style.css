@@ -290,7 +290,7 @@ button {
 }
 
 .featured-logos {
-  grid-template-columns: repeat(4, 30px);
+  grid-template-columns: repeat(5, 30px);
   align-items: center;
   justify-content: center;
   padding-block: 2.4rem;

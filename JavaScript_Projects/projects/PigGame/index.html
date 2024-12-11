@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pig Game</title>
+
+  <!--=============== BOXICONS ===============-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="pigGame-container container">
+    <div class="pigGame-data">
+      <h1 class="pigGame-title">Pig Game</h1>
+      <button class="pigGame-description" onclick="openGameRules()">Game Rules</button>
+      <div class="backdrop">
+        <p class="pigGame-rules">
+          The goal is to accumulate as many points as possible, adding up the numbers rolled on the die.
+          <br>
+          However, if a player rolls a 1, the player's turn is over and any points they have accumulated during this
+          turn
+          are forfeited.
+          <br>
+          A player can also choose to hold (stop rolling the die) if they do not want to take a chance of rolling a 1
+          and
+          losing all of their points from this turn.
+          <br>
+          When a player reaches a total of 100 or more points, the game ends and that player is the winner.
+          <i class='bx bx-x close-icon' onclick="closeGameRules()"></i>
+        </p>
+      </div>
+    </div>
+
+    <button class="btn btn-new" onclick="newGame()">
+      <i class='bx bx-joystick btn-icon'></i> New Game
+    </button>
+
+    <div class="players-container
+    grid">
+      <div class="player-1-container active">
+        <h2 class="player-name" id="player-1">Player 1</h2>
+        <div class="player-score" id="score-1">0</div>
+
+        <div class="current-score-container">
+          <h3 class="current-score-txt">Current</h3>
+          <p class="current-score" id="current-score-1">0</p>
+        </div>
+      </div>
+
+      <img src="images/dice-1.png" alt="dice" class="pigGame-dice">
+
+      <div class="player-2-container">
+        <h2 class="player-name" id="player-2">Player 2</h2>
+        <div class="player-score" id="score-2">0</div>
+
+        <div class="current-score-container">
+          <h3 class="current-score-txt">Current</h3>
+          <p class="current-score" id="current-score-2">0</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="btns-container grid">
+      <button class="btn btn-roll" onclick="rollDice()">
+        <i class='bx bx-refresh btn-icon'></i> Roll Dice
+      </button>
+
+      <button class="btn btn-hold" onclick="hold()">
+        <i class='bx bxs-hand btn-icon'></i> Hold
+      </button>
+    </div>
+
+
+  </div>
+
+  <!--==================== APP JS ====================-->
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
