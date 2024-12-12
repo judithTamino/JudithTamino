@@ -150,7 +150,7 @@ button {
 
 /*==================== LAYOUT ====================*/
 .container {
-  max-width: 768px;
+  max-width: 900px;
   margin-inline: 2.4rem;
 }
 
@@ -398,6 +398,7 @@ button {
 /*==================== HTML & CSS PROJECTS (SERVICES) ====================*/
 .services-container {
   overflow: initial;
+  row-gap: 4.8rem;
 }
 
 .services-content {
@@ -443,24 +444,6 @@ button {
   transform: translateX(.4rem);
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none;
-}
-
-.swiper-services--icon {
-  font-size: 3.2rem;
-  color: var(--first-color);
-}
-
-.swiper-button-prev {
-  left: -.8rem;
-}
-
-.swiper-button-next {
-  right: -.8rem;
-}
-
 /*==================== JAVASCRIPT PROJECTS (PROJECTS) ====================*/
 .projects-container {
   justify-content: center;
@@ -478,12 +461,6 @@ button {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
 }
-
-  /* 
-- spacing (px):
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
- */
-
 
 /*==================== CONTACT ME ====================*/
 .contact-container {
@@ -710,8 +687,8 @@ button {
   }
 
   .about-container,
-  .services-content,
   .contact-container,
+  .services-container,
   .footer-container,
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
@@ -833,22 +810,11 @@ button {
     padding-block: 8rem 0;
   }
 
-  .services-content {
-    column-gap: 8rem;
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .swiper-services--icon {
-    font-size: 5.6rem;
-  }
-
-  .swiper-button-prev {
-    left: -5.6rem;
-  }
-
-  .swiper-button-next {
-    right: -5.6rem;
-  }
-
+ 
   .contact-form {
     width: 460px;
   }

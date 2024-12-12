@@ -26,16 +26,6 @@ function linkAction() {
 }
 navLink.forEach(link => link.addEventListener('click', linkAction));
 
-/* ========== HTML & CSS PROJECTS SWIPER ========== */
-let swiper = new Swiper(".services-container", {
-  loop: true,
-  cssMode: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
 /* ========== SCROLL SECTIONS ACTIVE LINK ========== */
 const sections = document.querySelectorAll('section[id]');
 
